@@ -1,12 +1,18 @@
+# nome da pipeline
 name: primeira-pipeline
+
+# Define quando o workflow será executado
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
+
+# Contêm as etapas a serem executadas
 jobs:
   primeiro-job: 
     name: "Meu Primeiro Job"
     runs-on: "ubuntu-latest"
+    # steps: são as etapas que serão executadas na pipeline
     steps:
       - name: "Minha primeira ação"
         run: echo "Hello World !!!"
