@@ -10,7 +10,7 @@ on:
 # Contêm as etapas a serem executadas
 jobs:
   primeiro-job: 
-    name: "Meu Primeiro Job"
+    name: "Primeiro Job - Hello World"
     runs-on: "ubuntu-latest"
     # steps: são as etapas que serão executadas na pipeline
     steps:
@@ -26,7 +26,7 @@ jobs:
           print(variavel)
         shell: python
   segundo-job:
-    name: "Instalação do Ambiente NodeJS"
+    name: "Segundo Job - Instalação do Ambiente NodeJS"
     runs-on: "ubuntu-latest"
     needs: [primeiro-job]
     steps:
